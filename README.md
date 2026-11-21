@@ -20,13 +20,13 @@ Most of the data I work with is scarce, messy, or doesn't look like the test. So
 
 **[▶ Try it yourself](https://godsonntungi.github.io/#lab)**: drag the ship around the microphone and watch what it hears change.
 
-Microphones on the South African seabed hear wind, waves, whales and ships all at once. The job is to say how much of each 15 minutes of sound is a ship. To understand the problem I built pages where you add a ship yourself and drag it past the microphone. They showed me where my points go: loud ships get under-guessed, and that one kind of window costs 65% of my lost points. My model scores 0.811; first place is 0.905.
+Microphones on the South African seabed hear wind, waves, whales and ships all at once. The job is to say how much of each 15 minutes of sound is a ship. To understand the problem I built pages where you add a ship yourself and drag it past the microphone. They showed me where my points go: loud ships get under-guessed, and that one kind of window costs 65% of my lost points. My model scores 0.811; first place is 0.905. [Code](https://github.com/GodsonNtungi/listening-for-ships)
 
 ### Forecasting water storage worldwide, one month ahead
 
 <img alt="Forecast error by how variable, seasonal and wet each grid cell is, and by horizon" src="./img/water-regimes.png" width="100%">
 
-Water stored on land, measured from space by satellite gravity, month by month. I predict the change from last month instead of the level, with a per-cell seasonal model, four climate sources and a small tree correction on top. It cuts squared error by 32% against carrying the last value forward. Along the way I found and fixed a leak in my own pipeline, and showed that the features a model ranks highest can still hurt the forecast.
+Water stored on land, measured from space by satellite gravity, month by month. I predict the change from last month instead of the level, with a per-cell seasonal model, four climate sources and a small tree correction on top. It cuts squared error by 32% against carrying the last value forward. Along the way I found and fixed a leak in my own pipeline, and showed that the features a model ranks highest can still hurt the forecast. [Code](https://github.com/GodsonNtungi/water-storage-forecast)
 
 ### Validating the way the test is built
 
@@ -41,7 +41,7 @@ Predicting whether a recorded death was climate-sensitive. Train and test turned
 
 <img alt="Light curves of a supernova, a variable star and an active galaxy" src="./img/sky-lightcurves.png" width="100%">
 
-Sorting sky alerts into supernova, variable star or active galaxy from brightness over time. With the full history it scores 0.98; from only the first 10 days it still reaches 0.95, early enough to point a telescope.
+Sorting sky alerts into supernova, variable star or active galaxy from brightness over time. With the full history it is right 99% of the time; from only the first 10 days, still 97%, early enough to point a telescope. [Code](https://github.com/GodsonNtungi/early-supernova-classifier)
 
 ## My work in computer vision
 
@@ -140,7 +140,7 @@ Before any model, the data has to be right. These are pipelines and audits where
 
 <img alt="Four census tracts: reference roads, drivable roads and track roads" src="./img/road-exits.png" width="100%">
 
-I rebuilt a hidden scoring pipeline for 9,379 US census tracts from 5 GB of map data and matched it to within 0.00000005, by clipping in DuckDB in the same projection as the reference. Then I measured what the score misses: 19% of real ways out of rural tracts are hidden from the escape-route map, against 4% for urban ones.
+I rebuilt a hidden scoring pipeline for 9,379 US census tracts from 5 GB of map data and matched it to within 0.00000005, by clipping in DuckDB in the same projection as the reference. Then I measured what the score misses: 19% of real ways out of rural tracts are hidden from the escape-route map, against 4% for urban ones. [Code](https://github.com/GodsonNtungi/road-coverage-audit)
 
 ### Flood and landslide risk for Tanzania
 
