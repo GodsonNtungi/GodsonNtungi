@@ -136,11 +136,11 @@ An assistant for an insurance business on web, WhatsApp and SMS. One tool-callin
 
 Before any model, the data has to be right. These are pipelines and audits where getting the data right was the whole job.
 
-### Auditing a road-coverage score, to 7 decimal places
+### Auditing a road-coverage score, to 8 decimal places
 
 <img alt="Four census tracts: reference roads, drivable roads and track roads" src="./img/road-exits.png" width="100%">
 
-I rebuilt a hidden scoring pipeline for 9,379 US census tracts from 5 GB of map data and matched it to within 0.0000005, by clipping in DuckDB in the same projection as the reference. Then I measured what the score misses: 19% of real ways out of rural tracts are hidden from the escape-route map, against 4% for urban ones.
+I rebuilt a hidden scoring pipeline for 9,379 US census tracts from 5 GB of map data and matched it to within 0.00000005, by clipping in DuckDB in the same projection as the reference. Then I measured what the score misses: 19% of real ways out of rural tracts are hidden from the escape-route map, against 4% for urban ones.
 
 ### Flood and landslide risk for Tanzania
 
